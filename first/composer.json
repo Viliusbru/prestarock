@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dekor/php-array-table": "1.0"
+    }
+}
