@@ -2,8 +2,6 @@
 
 $data = [1, 2, 4, 7, 1, 6, 2, 8];
 $sorted_array = sort_list($data);
-$total_sum = get_total($sorted_array);
-$required_sum = get_required_sum($total_sum, 3);
 
 
 function sort_list($list)
@@ -14,19 +12,6 @@ function sort_list($list)
         $sorted_data[] += $item;
     }
     return $sorted_data;
-}
-function get_total($list)
-{
-    $total_sum = 0;
-    foreach ($list as $item) {
-        $total_sum += $item;
-    }
-    return $total_sum;
-};
-
-function get_required_sum($total, $num_of_groups)
-{
-    return round($total / $num_of_groups);
 }
 
 function create_lists($group_count)
