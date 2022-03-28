@@ -10,5 +10,6 @@ $obj->group_items();
 foreach ($obj->arrayLists as $item) {
     echo '<pre>';
     print_r($item);
+    echo array_sum($item);
     echo '</pre>';
 }
