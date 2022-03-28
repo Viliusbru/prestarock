@@ -1,6 +1,6 @@
 <?php
 
-class ListClass
+class ArrayManipulation
 {
     public $list;
     public $sorted_data;
@@ -22,7 +22,7 @@ class ListClass
         return $this->arrayLists = $arrayLists;
     }
 
-    public function smallest_array()
+    protected function smallest_array()
     {
         $lowestSum = array_sum($this->arrayLists[0]);
         $lowestArrayKey = 0;
@@ -35,7 +35,7 @@ class ListClass
         }
         return $lowestArrayKey;
     }
-    public function group_items()
+    public function get_groups()
     {
         for ($i = 0; $i < count($this->sorted_data); $i++) {
             array_push($this->arrayLists[$this->smallest_array()], $this->sorted_data[$i]);
