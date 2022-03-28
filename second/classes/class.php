@@ -2,8 +2,7 @@
 
 class ArrayManipulation
 {
-    public $list;
-    public $sorted_data;
+    private $sorted_data;
     public $arrayLists;
 
     function __construct($list)
@@ -13,7 +12,7 @@ class ArrayManipulation
         rsort($this->sorted_data);
     }
 
-    public function create_lists($group_count)
+    private function create_lists($group_count)
     {
         $arrayLists = [];
         for ($list = 0; $list < $group_count; $list++) {
@@ -35,8 +34,9 @@ class ArrayManipulation
         }
         return $lowestArrayKey;
     }
-    public function get_groups()
+    public function get_groups($group_count)
     {
+        $this->create_lists($group_count);
         for ($i = 0; $i < count($this->sorted_data); $i++) {
             array_push($this->arrayLists[$this->smallest_array()], $this->sorted_data[$i]);
         }

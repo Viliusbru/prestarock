@@ -4,8 +4,7 @@ $data = [1, 2, 4, 7, 1, 6, 2, 8];
 
 
 $obj = new ArrayManipulation($data);
-$obj->create_lists(3);
-$obj->get_groups();
+$obj->get_groups(3);
 // print_r($obj);
 foreach ($obj->arrayLists as $item) {
     echo '<pre>';
