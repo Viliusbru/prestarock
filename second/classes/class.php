@@ -22,7 +22,7 @@ class ArrayManipulation
         return $this->arrayLists = $arrayLists;
     }
 
-    protected function smallest_array()
+    private function smallest_array()
     {
         $lowestSum = array_sum($this->arrayLists[0]);
         $lowestArrayKey = 0;
